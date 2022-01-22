@@ -5,4 +5,4 @@ from flask import render_template
 @app.route('/index')
 def index():
     user = {"kullaniciadi":"Onur"}
-    return render_template("index.html")
+    return render_template("index.html", title="TireTire", user=user)

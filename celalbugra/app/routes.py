@@ -6,4 +6,5 @@ from flask import render_template
 def index():
     # return "Hello World!"
     user = {"kullaniciadi":"Bugra"}
-    return render_template("index.html",title="",)
+    return render_template("index.html",title="Deneme",user=user)
+    

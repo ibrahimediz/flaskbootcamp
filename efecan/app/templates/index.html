@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{{title}} Anasayfa </title>
+        {%if title%}
+        <title> {{title}} </title>
+        {%else%}
+        <title> Anasayfa </title>
+        {%endif%}
     </head>
     <body>
-        <p>This is user {{user.username}}.</p>
+        <p> {{user.username}}</p>
     </body>
 </html>

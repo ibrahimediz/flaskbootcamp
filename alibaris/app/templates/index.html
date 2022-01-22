@@ -1,7 +1,11 @@
 <html>
     
     <head>
+        {% if title %}
         <title>{{title}} Homepage</title>
+        {% else %}
+        <title> Anasayfa </title>
+        {% endif %}
     </head>
 
     <body>

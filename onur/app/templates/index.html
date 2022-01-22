@@ -1,8 +1,13 @@
 <html>
     <head>
+        {% if title %}
         <title> {{title}} Anasayfa</title>
+        {% else %}
+        <title> Anasayfa </title>
+        {% endif %}
     </head>
     <body>
         <h1>Selamlar {{user.kulalniciadi}}</h1>
+        <h2>Welcome to my first FlaskApp</h2>
     </body>
 </html>

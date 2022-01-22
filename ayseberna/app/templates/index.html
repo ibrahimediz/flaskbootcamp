@@ -1,8 +1,12 @@
 <html>
     <head>
+        {% if title %}
         <title> {{title}} Anasayfa </title>
+        {% else %}
+        <title> Başlıksız Anasayfa </title>
+        {% endif %}
     </head>
     <body> 
-        <h1> {{user.kullaniciadi}} </h1>
+        <h1> Selam {{user.kullaniciadi}} </h1>
     </body>
 </html>

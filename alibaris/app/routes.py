@@ -9,5 +9,5 @@ def index():
 
     return render_template(
         'index.html', 
-        title='Index', 
+        title='Blog', 
         user=user)
