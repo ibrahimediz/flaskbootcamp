@@ -13,9 +13,10 @@ def index():
         },
         {
             'author': {'username': 'Hasan'},
-            'test': 'Yakarsa dunyayi garipler yakar'
+            'test': 'Allahim sil beni listeden :) Amin :)'
         }
     ]
+    
     user = {'username': 'Baran'}
 
     return render_template('index.html', 

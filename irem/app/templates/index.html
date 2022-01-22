@@ -1,17 +1,11 @@
-<html>
-    <head>
-        {% if title %}
-        <title>{{title}} Anasayfa</title>
-        {% else %}
-        <title>Anasayfa</title>
-        {% endif %}
-    </head>
+{% extends 'base.html' %}
 
-    <body>
-        <h1>Merhaba {{user.kullaniciadi}}</h1>
-        {% for gonderi in gonderiler%}
-        <h2>{{gonderi.yazar.kullaniciadi}}</h2>
-        <div><p>{{gonderi.yazi}}</p></div>
-        {% endfor %}
-    </body>
-</html>
+{% block title %} Yazı Listesi {% endblock title %} 
+
+{% block content %}
+<h1>Merhaba {{user.kullaniciadi}}</h1>
+{% for gonderi in gonderiler %}
+<h2>{{gonderi.yazar.username}}</h2> dedi ki 
+<div><p>{{gonderi.yazi}}</p></div>
+{% endfor %}
+{% endblock content %}

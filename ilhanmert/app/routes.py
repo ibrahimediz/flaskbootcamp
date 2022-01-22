@@ -14,4 +14,5 @@ def index():
             'yazi': 'post2'
         },
     ]
+    user={'kullaniciadi':'ilhan'}
     return render_template("index.html",title="Web sitesi", user=user, gonderiler=gonderis)

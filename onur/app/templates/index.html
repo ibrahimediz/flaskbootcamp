@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
-{% block baslik %}AnaSayfa{% endblock baslik %}
-{% block content %}{% endblock content %}
-<h1>Selamlar {{user.kulalniciadi}}</h1>
-<h2>Welcome to my first FlaskApp</h2>
+
+{% block title %} Yazı Listesi {% endblock title %} 
+
+{% block content %}
+<h1>Merhaba {{user.kullaniciadi}}</h1>
 {% for gonderi in gonderiler %}
-<h3>{{gonderi.yazar.username}}</h3> dedi ki
+<h2>{{gonderi.yazar.username}}</h2> dedi ki 
 <div><p>{{gonderi.yazi}}</p></div>
 {% endfor %}
+{% endblock content %}

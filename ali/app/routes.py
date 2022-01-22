@@ -13,4 +13,5 @@ def index():
         },
 
     ]
+    user = {"username":"Ali"}
     return render_template("index.html",title="Web Sitesi",user=user,gonderiler = gonderis)

@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
-{% block baslik %} AnaSayfa {% endblock baslik %}  
+
+{% block title %} Yazı Listesi {% endblock title %} 
+
 {% block content %}
 <h1>Merhaba {{user.kullaniciadi}}</h1>
 {% for gonderi in gonderiler %}

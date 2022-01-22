@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block baslik %} AnaSayfa {% endblock baslik %}  
 {% block content %}
+        <h1>{{user.username}}</h1>
 
         {% for gonderi in gonderiler %}
-            <p>{{gonderi.yazar.username}}</p>
+            <h3>{{gonderi.yazar.username}}</h3>
+            <p>{{gonderi.yazi}}</p>
         {% endfor %}
 
 {% endblock content %}

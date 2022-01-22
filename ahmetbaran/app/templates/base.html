@@ -1,7 +1,7 @@
 <html>
     <head>
         {% if title %}
-        <title>{% block baslik %}{{title}}{% endblock baslik %} Homepage</title>
+        <title>{% block title %} {{title}} {% endblock title %}</title>
         {% else %}
         <title>Homepage</title>
         {% endif %}

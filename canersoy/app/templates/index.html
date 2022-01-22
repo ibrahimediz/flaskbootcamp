@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if title %}
-    <title>{{title}} Page</title>
-    {% else %}
-    <title>Untitled Page</title>
-    {% endif %}
-</head>
-<body>
-    <h1>Hello {{user}}!</h1>
-    {% for post in posts %}
-    <h2>{{post.postWriter.name post.postWriter.surname}} posted {{post.postText}}</h2>
-    {% endfor %}
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hello {{user}}!</h1>
+{% for post in posts %}
+<h2>{{post.postWriter.name post.postWriter.surname}} posted {{post.postText}}</h2>
+{% endfor %}
+{% endblock %}

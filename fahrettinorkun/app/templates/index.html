@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
+
 {% block baslik %} AnaSayfa {% endblock baslik %}  
+
 {% block content %}
-<h1>Merhaba {{user.kullaniciadi}}</h1>
-{% for gonderi in gonderiler %}
-<h2>{{gonderi.yazar.username}}</h2> dedi ki 
-<div><p>{{gonderi.yazi}}</p></div>
-{% endfor %}
+    <h1>Merhaba {{user.kullaniciadi}}</h1>
+    
+    {% for gonderi in gonderiler %}
+        <h2>{{gonderi.yazar.username}}</h2> dedi ki 
+        <div><p>{{gonderi.yazi}}</p></div>
+    {% endfor %}
 {% endblock content %}

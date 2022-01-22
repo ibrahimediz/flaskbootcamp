@@ -7,7 +7,7 @@ from flask import render_template
 def index():
     gonderis = [{
         {"yazar": {"username": "bilal"},
-        "eser": "sait faikten abasıyanık"}
+        "eser": "sait faik'in abasıyanık kitabı :d"}
     }]
 
     return render_template('index.html', title="------", user=user, gonderiler=gonderis)

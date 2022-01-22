@@ -1,0 +1,13 @@
+<html>
+    <head>
+        {% if title %}
+        <title>   {% block title %}{{title}}{% endblock title %} Anasayfa</title>
+        {% else %}
+        <title> Anasayfa</title>
+        {% endif %}
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %} 
+    </body>
+</html>

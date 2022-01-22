@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
-{% block baslik %} Homepage {% endblock baslik %}  
+{% block title %} Authors {% endblock title %}  
 
 {% block content %}
-<h1>Merhaba {{user.username}}</h1>
+<h1>Hello {{user.username}}</h1>
 {% for info in authorInfo %}
 <h2>{{info.author.username}}</h2> said
 <div><p>{{info.text}}</p></div>

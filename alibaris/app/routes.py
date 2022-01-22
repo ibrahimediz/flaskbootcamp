@@ -17,7 +17,6 @@ def index():
         {'yazar':{'username':'alibaris'},
         'yazi':'POST THREE',
         },
-
     ]
 
     return render_template(

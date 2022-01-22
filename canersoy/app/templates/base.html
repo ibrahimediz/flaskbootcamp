@@ -11,9 +11,7 @@
     {% endif %}
 </head>
 <body>
-    <h1>Hello {{user}}!</h1>
-    {% for post in posts %}
-    <h2>{{post.postWriter.name post.postWriter.surname}} posted {{post.postText}}</h2>
-    {% endfor %}
+    {% block content %}
+    {% endblock %} 
 </body>
 </html>

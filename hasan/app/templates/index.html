@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -10,26 +11,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  {% if title %}
-	  <title>{{title}}</title>
-	{% else %}
-    <title> Title is not Found</title>
-  {% endif %}
+  {% block header %}
+
+  
+  {% endblock header %} 
 </head>
 <body>
-  {% if name %}
-	  <h1>{{name}}</h1>
-	{% else %}
-    <h1> Name is not Found</h1>
-  {% endif %}
+  
+  {% block content %} 
+    {% if name %}
+      <h1>{{name}}</h1>
+    {% else %}
+      <h1> Name is not Found</h1>
+    {% endif %}
 
     {% for quote in quotes %}
       <h4>{{quote[0]}}</h4>
       <p>{{1}}</p>
     {% endfor %}
+
+  {% endblock content %}
 </body>
 </html>
-<!-- partial -->
+
 
 </body>
 </html>
