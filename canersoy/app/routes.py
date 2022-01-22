@@ -12,3 +12,8 @@ def index():
     ]
     user=os.path.basename(Path(__file__).parents[1])
     return render_template("index.html",title="Home",user=user,posts=posts)
+
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html',title="Login",form=form)

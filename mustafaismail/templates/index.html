@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Yazı Listesi {% endblock title %} 
+
+{% block content %}
+<h1>Merhaba {{user.kullaniciadi}}</h1>
+{% for gonderi in gonderiler %}
+<h2>{{gonderi.yazar.username}}</h2> dedi ki 
+<div><p>{{gonderi.yazi}}</p></div>
+{% endfor %}
+{% endblock content %}

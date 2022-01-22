@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+    {% block title %}
+        {{title}}
+    {% endblock title %}
+
+    {% block content %}
+
+    
+        <form action='' method='post' novalidate >
+                    {{form.hidden_tag()}}
+                    <p> {{form.username.label}}<br>
+                        {{form.username(size=16)}}
+                    </p>
+                    <p> {{form.password.label}}<br>
+                        {{form.password()}}
+                    </p>
+                    <p> {{form.remember_me.label}} {{form.remember_me()}}</p>
+                    <p>{{form.submit()}}</p>
+        </form>
+
+    {%endblock%}
+

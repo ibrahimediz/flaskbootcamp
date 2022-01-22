@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form action='' method='post'>
+        {{ form.hidden_tag() }}
+
+        {{ form.kullaniciadi.label}}
+        {{ form.kullaniciadi()}}
+        <br>
+        {{ form.sifre.label}}
+        {{ form.sifre()}}
+        <br>
+        {{ form.benihatirla.label}}
+        {{ form.benihatirla()}}
+        <br>
+        {{ form.submit.label}}
+        {{ form.submit()}}
+
+
+    </form>
+
+{% endblock %}

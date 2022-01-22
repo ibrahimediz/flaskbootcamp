@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block baslik %} Login {% endblock baslik %}  
+{% block content %}
+        <h1>{{form.kullaniciadi.label}}</h1>
+        {{form.kullaniciadi()}}
+        <h1>{{form.sifre.label}}</h1>
+        {{form.sifre()}}
+        <h3>{{form.benihatirla.label}}</h3>
+        {{form.benihatirla()}}
+        <h3>{{form.submit.label}}</h3>
+        {{form.submit()}}
+        
+
+{% endblock content %}
