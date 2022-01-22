@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template
+from flask import render_template, flash, redirect
 from app.forms import LoginForm
 
 @app.route('/')
@@ -12,7 +12,11 @@ def index():
     user = {"username" : "Çay var simit var neye bakıyon"}
     return render_template("index.html",title="Birine mi baktın baba yiğit",send=gonder)
 
-@app.route('/login')
+@app.route('/login', method['GET' , 'POST'])
 def login():
     form = LoginForm()
+    if form.validate_on_submit():
+        flash('login requested for user {},remember_me ={}'.format(
+            form.kullaniciadi.data, form.benihatirla.data
+        ))
     return render_template('login.html', title="Giriş Yap", form=form)

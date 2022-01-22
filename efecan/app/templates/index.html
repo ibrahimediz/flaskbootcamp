@@ -2,6 +2,7 @@
 {% block baslik %} AnaSayfa {% endblock baslik %}  
 {% block content %}
 <h1>Merhaba {{user.kullaniciadi}}</h1>
+{%with messages get_flash_messages()%}
 {% for gonderi in send %}
 <h2>{{gonderi.yazar.username}}</h2> 
 <div><p>{{gonderi.yazi}}</p></div>

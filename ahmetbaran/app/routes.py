@@ -1,6 +1,8 @@
 from app import app
-from flask import render_template
+from flask import render_template, flash, redirect
 from app.forms import LoginForm
+
+# flash ekrana bilgi basmak icin. nerden ne geldi 
 
 @app.route('/')
 @app.route('/index')
@@ -25,9 +27,12 @@ def index():
                            authorInfo = authorInfo
                            )
 
-@app.route('/login')
+@app.route('/login', methods = ['GET', 'POST'])
 def login():
     form = LoginForm()
+    if form.validate_on_submit():
+        flash(f'Login requested for user {form.username.data}, remember me={form.rememberMe.data}')
+        return redirect('/index')
     return render_template('login.html', title="Login", form=form)
 
     # return f'''
