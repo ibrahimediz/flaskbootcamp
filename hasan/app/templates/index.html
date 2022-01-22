@@ -10,11 +10,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{{title}}</title>
-	
+  {% if title %}
+	  <title>{{title}}</title>
+	{% else %}
+    <title> Title is not Found</title>
+  {% endif %}
 </head>
 <body>
-    <h1> {{name}} </h1>
+  {% if name %}
+	  <h1>{{name}}</h1>
+	{% else %}
+    <h1> Name is not Found</h1>
+  {% endif %}
+
+    {% for quote in quotes %}
+      <h4>{{quote[0]}}</h4>
+      <p>{{1}}</p>
+    {% endfor %}
 </body>
 </html>
 <!-- partial -->

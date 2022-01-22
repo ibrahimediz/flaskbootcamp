@@ -5,5 +5,9 @@ from flask import render_template
 @app.route('/index')
 
 def index():
-    user = {"kullaniciadi": "Bilal"}
-    return render_template('index.html', title="Web projesi", user=user)
+    gonderis = [{
+        {"yazar": {"username": "bilal"},
+        "eser": "sait faikten abasıyanık"}
+    }]
+
+    return render_template('index.html', title="------", user=user, gonderiler=gonderis)

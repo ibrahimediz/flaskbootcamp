@@ -1,13 +1,9 @@
-<html>
-    <head>
-        {% if title %}
-        <title>{{title}} Anasayfa</title>
-        {% else %}
-        <title>Anasayfa</title>
-        {% endif %}
-    </head>
-
-    <body>
-        <h1>Merhaba {{user.kullaniciadi}}</h1>
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block baslik %} AnaSayfa {% endblock baslik %}  
+{% block content %}
+<h1>Merhaba {{user.kullaniciadi}}</h1>
+{% for sent in sents %}
+<h2>{{sent.yazar.username}}</h2> dedi ki 
+<div><p>{{sent.yazi}}</p></div>
+{% endfor %}
+{% endblock content %}

@@ -1,9 +1,17 @@
 <html>
     <head>
+        {% if title %}
         <title>{{title}} Homepage</title>
+        {% else %}
+        <title>Homepage</title>
+        {% endif %}
     </head>
 
     <body>
-        <h1>Merhaba {{user.kullaniciadi}}</h1>
+        <h1>Merhaba {{user.username}}</h1>
+        {% for info in data%}
+        <h2>{{gonderi.author.username}}</h2>
+        <div><p>{{gonderi.text}}</p></div>
+        {% endfor %}
     </body>
 </html>

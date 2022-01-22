@@ -1,8 +1,17 @@
 <html>
     <head>
-        <title> {{title}} Anasayfa</title>
+        {% if title %}
+        <title>{{title}} Anasayfa</title>
+        {% else %}
+        <title>Anasayfa</title>
+        {% endif %}
     </head>
+
     <body>
         <h1>Merhaba {{user.kullaniciadi}}</h1>
+        {% for gonderi in gonderiler%}
+        <h2>{{gonderi.yazar.kullaniciadi}}</h2>
+        <div><p>{{gonderi.yazi}}</p></div>
+        {% endfor %}
     </body>
 </html>

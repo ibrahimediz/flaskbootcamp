@@ -6,4 +6,13 @@ from flask import Flask, render_template
 def index():
     title = "Benim Projem"
     user = {"kullaniciadi":"Nedim can"}
-    return render_template('index.html', title=title, user=user)
+
+    gonderiler = [
+        {'yazar':{'username':'nedim'},
+        'yazi':'merhaba dunya!'
+        },
+        {'yazar':{'username':'mert'},
+        'yazi':'hi universe!'
+        }]
+
+    return render_template('index.html', title=title, user=user, gonderiler=gonderiler)

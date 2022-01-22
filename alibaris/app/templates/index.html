@@ -1,15 +1,14 @@
-<html>
-    
-    <head>
-        {% if title %}
-        <title>{{title}} Homepage</title>
-        {% else %}
-        <title> Anasayfa </title>
-        {% endif %}
-    </head>
-
+{% extends 'base.html' %}
+{% block baslik %} AnaSayfa {% endblock baslik %}  
+{% block content %}
     <body>
         <h1>{{user.kullaniciadi}}</h1>
+        {% for post in posts %}
+        <h2>{{post.yazar.username}}</h2> dedi,
+        <div>
+            <p>{{post.yazi}}</p>
+        </div> 
+        {%endfor%}
     </body>
+{% endblock content %}
 
-</html>

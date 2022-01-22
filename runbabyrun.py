@@ -1,13 +1,13 @@
-# import subprocess
-# liste = ["ilhanmert","canersoy","efecan",
-# "mustafaismail","ayseberna","enes",
-# "hasan","ege","nedimcan","ahmetbaran",
-# "fahrettinorkun","celalbugra","onur","musa",
-# "alibaris","ardacem","irem","seyit","bilal",
-# "abdullah","ali","furkan","fatihcan"]
-# import random as rnd
+import subprocess
+liste = ["ilhanmert","canersoy","efecan",
+"mustafaismail","ayseberna","enes",
+"hasan","ege","nedimcan","ahmetbaran",
+"fahrettinorkun","celalbugra","onur","musa",
+"alibaris","ardacem","irem","seyit","bilal",
+"abdullah","ali","furkan","fatihcan"]
+import random as rnd
 
-# print(rnd.choice(liste))
+print(rnd.choice(liste))
 # # subprocess.run(komut,shell=True)
 # # subprocess.run(f"flask run --port=500{rnd.randint(0,10)}",shell=True,check=True,)
 # 5001

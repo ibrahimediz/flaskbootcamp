@@ -4,4 +4,14 @@ from flask import render_template
 @app.route('/index')
 def index():
     user ={"kullaniciadi":"ilhan"}
-    return render_template("index.html",title="Web sitesi", user=user)
+    gonderis=[
+        {
+            'yazar':{'username':'ilhan'},
+            'yazi': 'post1'
+        },
+        {
+            'yazar':{'username':'mert'},
+            'yazi': 'post2'
+        },
+    ]
+    return render_template("index.html",title="Web sitesi", user=user, gonderiler=gonderis)

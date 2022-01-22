@@ -5,5 +5,9 @@
 
     <body>
         <h1>Merhaba {{user.username}}</h1>
+        {%for gonderi in gonderliler%}
+        <h2>{{gonderi.yazar.username}}</h2>
+        <div> {{gonderi.yazi}}</div>
+        {%endfor%}
     </body>
 </html>

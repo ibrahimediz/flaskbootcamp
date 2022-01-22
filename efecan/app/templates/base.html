@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {%if title%}
+        <title> {%block content%} {{title}} {% endblock %} </title>
+        {%else%}
+        <title> Anasayfa </title>
+        {%endif%}
+    </head>
+    <body>
+        {%block content%}
+        {% endblock %}
+    </body>
+</html>

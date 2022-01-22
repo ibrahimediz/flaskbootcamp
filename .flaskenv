@@ -1,1 +1,1 @@
-FLASK_APP=ayseberna/blog.py
+FLASK_APP=celalbugra/blog.py

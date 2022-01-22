@@ -1,13 +1,14 @@
 <html>
     <head>
         {% if title %}
-        <title>   {% block baslik %}{{title}}{% endblock baslik %} Anasayfa</title>
+        <title>{% block baslik %}{{title}}{% endblock baslik %} Homepage</title>
         {% else %}
-        <title> Anasayfa</title>
+        <title>Homepage</title>
         {% endif %}
     </head>
+
     <body>
         {% block content %}
-        {% endblock %} 
+        {% endblock %}
     </body>
 </html>

@@ -1,8 +1,16 @@
 <html>
     <head>
+        {% if table %}
         <title>{{title}} Anasayfa</title>
+        {% else %}
+        <title>Anasayfa</title>
+        {%end if%}
     </head>
     <body>
         <h1>Merhaba {{user.kullaniciadi}}</h1>
+        {% for gonderi in gonderiler %}
+        <h2>{{gonderi.yazar.username}}</h2>
+        <div><p>{{gonderi.yazi}}</p></div>
+        {% end for %}
     </body>
 </html>

@@ -1,0 +1,19 @@
+<html>
+    
+    <head>
+        {% if title %}
+        <title>
+            {% block baslik %}{{title}}
+            {% endblock baslik %}</title>
+        {% else %}
+        <title> Anasayfa </title>
+        {% endif %}
+    </head>
+
+    <body>
+        {% block content %}
+
+        {% endblock content %}
+    </body>
+
+</html>

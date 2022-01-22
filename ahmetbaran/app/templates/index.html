@@ -1,13 +1,11 @@
-<html>
-    <head>
-        {% if title %}
-        <title>{{title}} Homepage</title>
-        {% else %}
-        <title>Homepage</title>
-        {% endif %}
-    </head>
+{% extends 'base.html' %}
 
-    <body>
-        <h1>Merhaba {{user.username}}</h1>
-    </body>
-</html>
+{% block baslik %} Homepage {% endblock baslik %}  
+
+{% block content %}
+<h1>Merhaba {{user.username}}</h1>
+{% for info in authorInfo %}
+<h2>{{info.author.username}}</h2> said
+<div><p>{{info.text}}</p></div>
+{% endfor %}
+{% endblock content %}
