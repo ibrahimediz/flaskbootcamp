@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template
+from flask import render_template,flash,redirect,url_for
 from app.forms import LoginForm
 
 @app.route('/')
@@ -10,7 +10,7 @@ def index():
         {"yazar": {"username": "bilal"},
         "eser": "sait faik'in abasıyanık kitabı :d"}
     ]
-
+    user = {"kullanicadi":"bilal"}
     return render_template('index.html', title="------", user=user, gonderiler=gonderis)
 
 @app.route('/login',methods=['GET','POST'])
