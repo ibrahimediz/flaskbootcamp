@@ -10,6 +10,9 @@
     {{form.hidden_tag()}}
     <p> {{form.kullaniciadi.label}}<br>
         {{form.kullaniciadi(size=32)}}
+        {% for error in form.kullaniciadi.errors%}
+        <span style="color:red;">[{{error}}]</span>
+        {%endfor%}
     </p>
     <p> {{form.sifre.label}}<br>
         {{form.sifre(size=32)}}

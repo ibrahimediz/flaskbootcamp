@@ -8,8 +8,9 @@
     </head>
     <body>
         <div>
-            Web Sitesi <a href = '/index'>AnaSayfa</a>
-            <a href="/login"> Giriş</a>
+            Web Sitesi 
+            <a href = "{{url_for('index')}}">AnaSayfa</a>
+            <a href="{{url_for('login')}}"> Giriş</a>
         </div>
         {% block content %}
         {% endblock %} 

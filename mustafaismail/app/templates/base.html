@@ -1,19 +1,19 @@
 <html>
     <head>
         {% if title %}
-        <title> {% block baslik %} {{title}} {% endblock baslik %} | Anasayfa</title>
+        <title>   {% block title %}
+            {{title}}
+            {% endblock title %}</title>
         {% else %}
         <title> Anasayfa</title>
         {% endif %}
     </head>
     <body>
         <div>
-            Web Sitesi
-            <a href="{{url_for('index')}}">Anasayfa</a>
-            <a href="{{url_for('login')}}">Login</a>
+            Web Sitesi <a href="/index"> Anasayfa </a>
+            <a href="/login"> Giriş</a>
         </div>
         {% block content %}
-        
         {% endblock %} 
     </body>
 </html>

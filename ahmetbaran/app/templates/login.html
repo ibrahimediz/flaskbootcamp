@@ -12,10 +12,16 @@
                     {{form.hidden_tag()}}
                     <p> {{form.username.label}}<br>
                         {{form.username(size=16)}}
+                        {% for error in form.username.errors %}
+                            <span style='color:red:'>{{error}}</span>
+                        {% endfor %}
                     </p>
                     <p> {{form.password.label}} 
                         <br>
                         {{form.password(size=16)}}
+                        {% for error in form.username.errors %}
+                            <span style='color:red:'>{{error}}</span>
+                        {% endfor %}
                     </p>
                     <p> {{form.rememberMe.label}} {{form.rememberMe()}} </p>
                         <br>

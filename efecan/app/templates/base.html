@@ -10,7 +10,8 @@
     <body>
         <div>
             web sitesi <a href="/index"> Ana sayfa</a>
-            <a href="/login"> Giriş</a>
+            <a href="{{url_for('index')}}"> Anasayfa</a>
+            <a href="{{url_for('login')}}"> Giriş</a>
         </div>
         {%block content%}
         {% endblock %}

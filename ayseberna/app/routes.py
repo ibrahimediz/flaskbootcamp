@@ -15,7 +15,11 @@ def index():
     user = {"kullaniciadi": "berna"}
     return render_template('index.html', gonderiler=gonderis, user=user)
 
-@app.route('/login')
+@app.route('/login', method=['GET', 'POST'])
 def login():
     form = LoginForm()
+    if form.validate_on_submit():
+        flash('Login requested for user {}, remember_me={}'.format(
+            form.kullaniciadi.data, form.benihatirla.data))
+        return redirect('/index')
     return render_template('login.html', title="Giriş Yap", form=form)

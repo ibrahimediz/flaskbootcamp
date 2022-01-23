@@ -1,20 +1,26 @@
-{% extends 'base.html' %}
-
-{% block title %}
-{{ title }}
-{% endblock %}
-
-{% block content %}
-    <form action="" method="post"  novalidate>
-        {{form.hidden_tag()}}
-        <p> {{form.username.label}}<br>
-        {{form.username()}}
-        </p>
-        <p> {{form.password.label}}<br>
-        {{form.password()}}
-        </p>
-        <p> {{form.remember_me.label}} {{form.remember_me()}}
+{% extends "base.html" %}
+    
+    {% block title %}
+        {{ title }}
+    {% endblock %}
+    
+    {% block content %}
+<form action="" method="post" novalidate >
+    {{form.hidden_tag()}}
+    <p> {{form.kullaniciadi.label}}<br>
+        {{form.kullaniciadi()}}<br>
+        {% for error in form.kullaniciadi.errors %}
+            <span style="color:red;">[{{error}}]</span>
+        {% endfor %} 
+    </p>
+    <p> {{form.sifre.label}}<br>
+        {{form.sifre()}}
+        {% for error in form.kullaniciadi.errors %}
+        <span style="color:red;">[{{error}}]</span>
+        {% endfor %}
+    </p>
+    <p> {{form.benihatirla.label}} {{form.benihatirla()}}
         <br>
-        <p> {{form.submit()}}</p>
-    </form>
-{% endblock %}
+    <p> {{form.submit()}}</p>
+</form>
+    {% endblock %}

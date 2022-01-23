@@ -1,7 +1,18 @@
 {% extends 'base.html' %}
-{% block baslik %} Yazılar {% endblock baslik %}  
+
+{% block title %} Yazı Listesi {% endblock title %} 
+
 {% block content %}
 <h1>Merhaba {{user.kullaniciadi}}</h1>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
 {% for gonderi in gonderiler %}
 <h2>{{gonderi.yazar.username}}</h2> dedi ki 
 <div><p>{{gonderi.yazi}}</p></div>

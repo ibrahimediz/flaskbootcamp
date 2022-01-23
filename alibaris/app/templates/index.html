@@ -1,18 +1,20 @@
 {% extends 'base.html' %}
 
-{% block baslik %} 
-    AnaSayfa 
-{% endblock baslik %}  
+{% block title %} Yazı Listesi {% endblock title %} 
 
 {% block content %}
-    <body>
-        <h1>{{user.kullaniciadi}}</h1>
-        {% for post in posts %}
-        <h2>{{post.yazar.username}}</h2> dedi,
-        <div>
-            <p>{{post.yazi}}</p>
-        </div> 
-        {%endfor%}
-    </body>
+<h1>Merhaba {{user.kullaniciadi}}</h1>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+{% for gonderi in gonderiler %}
+<h2>{{gonderi.yazar.username}}</h2> dedi ki 
+<div><p>{{gonderi.yazi}}</p></div>
+{% endfor %}
 {% endblock content %}
-

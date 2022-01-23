@@ -1,7 +1,7 @@
 <html>
     <head>
         {% if title %}
-        <title>{% block title %}{{title}}{% endblock title %} Anasayfa</title>
+        <title>   {% block baslik %}{{title}}{% endblock baslik %} Anasayfa</title>
         {% else %}
         <title> Anasayfa</title>
         {% endif %}
@@ -9,8 +9,8 @@
     <body>
         <div>
             Web Sitesi
-            <a href="/index">Anasayfa</a>
-            <a href="/login">Login</a>
+            <a href="{{url_for('index')}}">Anasayfa</a>
+            <a href="{{url_for('login')}}">Giriş</a>
         {% block content %}
         {% endblock %} 
     </body>

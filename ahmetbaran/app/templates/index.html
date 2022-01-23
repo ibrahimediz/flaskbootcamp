@@ -1,9 +1,20 @@
 {% extends 'base.html' %}
 
-{% block title %} Authors {% endblock title %}  
+{% block title %} Authors {% endblock title %}
 
 {% block content %}
 <h1>Hello {{user.username}}</h1>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
 {% for info in authorInfo %}
 <h2>{{info.author.username}}</h2> said
 <div><p>{{info.text}}</p></div>

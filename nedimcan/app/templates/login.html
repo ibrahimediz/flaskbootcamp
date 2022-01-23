@@ -2,22 +2,23 @@
 
 {% block content %}
 
-    <form action='' method='post'>
-        {{ form.hidden_tag() }}
-
-        {{ form.kullaniciadi.label}}
-        {{ form.kullaniciadi()}}
-        <br>
-        {{ form.sifre.label}}
-        {{ form.sifre()}}
-        <br>
-        {{ form.benihatirla.label}}
-        {{ form.benihatirla()}}
-        <br>
-        {{ form.submit.label}}
-        {{ form.submit()}}
-
-
+    <form action="" method="post" novalidate >
+        {{form.hidden_tag()}}
+        <p> {{form.kullaniciadi.label}}<br>
+            {{form.kullaniciadi()}}<br>
+            {% for error in form.kullaniciadi.errors %}
+                <span style="color:red;">[{{error}}]</span>
+            {% endfor %} 
+        </p>
+        <p> {{form.sifre.label}}<br>
+            {{form.sifre()}}
+            {% for error in form.kullaniciadi.errors %}
+            <span style="color:red;">[{{error}}]</span>
+            {% endfor %}
+        </p>
+        <p> {{form.benihatirla.label}} {{form.benihatirla()}}
+            <br>
+        <p> {{form.submit()}}</p>
     </form>
 
 {% endblock %}

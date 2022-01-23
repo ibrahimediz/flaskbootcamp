@@ -1,13 +1,23 @@
 {% extends base.html %}
 
+    {% block title %}
+        {{ title }}
+    {% endblock %}
+    
 {% block content %}
 <form action="" method="post" nonvalidate>
     {{form.hidden_tag()}}
     <p> {{form.kullaniciadi.label}} <br>
         {{form.kullaniciadi()}}
+        {% for error in form.kullaniciadi.errors %}
+            <span style="color:red;">[{{error}}]</span>
+        {% endfor %} 
     </p>
     <p> {{form.sifre.label}}<br>
         {{form.sifre()}}
+        {% for error in form.kullaniciadi.errors %}
+            <span style="color:red;">[{{error}}]</span>
+        {% endfor %} 
     </p>
     <p> {{form.benihatirla.label}} {{form.benihatirla()}}
     </p>
