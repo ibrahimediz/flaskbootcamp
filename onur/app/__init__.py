@@ -5,9 +5,8 @@ from flask_migrate import Migrate
 
 app = Flask(__name__)
 app.config.from_object(Config)
+# app.config["SECRET_KEY"] = "secret"
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-#app.config["SECRET_KEY"] = "secret"
-
-from app import routes, models
+from app import routes,models
