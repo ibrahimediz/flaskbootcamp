@@ -28,3 +28,19 @@ processes – if greater than 1 then handle each request in a new process up to 
 passthrough_errors – set this to True to disable the error catching.
 ssl_context – an SSL context for the connection.
 """
+
+import random
+
+kliste = ["İlhan Mert Alan","Can Ersoy","Efe Can Demir",
+"Mustafa İsmail Eyi","Ayşe Berna Aksoy","Hasan Özdemir",
+"Ege Tan","Nedim Can Ulusoy","Ahmet Baran Yılmaz","Fahrettin Orkun İncili",
+"Celal Buğra Kaya","Onur Akyol","Ali Barış Ayten","Arda Cem Özmen",
+"İrem Doğancı","Seyit İlktürk","Bilal Sedef","Ali Mansur","Furkan Keskinkılıç",
+"Fatih Can Akalın"]
+
+
+for i in range(1, int(len(kliste) / 4) + 1):
+    res = random.sample(kliste, 4)
+    kliste = [item for item in kliste if item not in res]
+    print(res)
+    
