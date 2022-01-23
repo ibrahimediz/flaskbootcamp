@@ -8,10 +8,11 @@
     </head>
     <body>
         <div>
-            Website <a href={{url_for('index')}}>Homepage</a>
-            <a href={{url_for('login')}}> Login</a>
-        </div>
+            Website 
+            <a href="{{url_for('index')}}">Homepage</a>
+            <a href="{{url_for('login')}}">Login</a>
         {% block content %}
         {% endblock %} 
+        </div>
     </body>
 </html>

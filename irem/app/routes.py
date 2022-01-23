@@ -2,11 +2,12 @@ from app import app
 from flask import render_template,flash,redirect,url_for
 from app.forms import LoginForm
 
+
 @app.route('/')
 @app.route('/anasayfa')
 def index():
     gonderis = [
-        {'yazar':{'username':'İrem'},
+        {'yazar':{'username':'irem'},
         'yazi':'What a wonderful world'
         },
         {'yazar':{'username':'hasan'},
@@ -14,7 +15,7 @@ def index():
         },
 
     ]
-    user = {"kullanicadi":"İrem"}
+    user = {"kullanicadi":"irem"}
     return render_template("index.html",title="Web Sitesi",user=user,gonderiler = gonderis)
     
 @app.route('/login',methods=['GET','POST'])

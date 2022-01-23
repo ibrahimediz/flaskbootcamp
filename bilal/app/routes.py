@@ -6,10 +6,10 @@ from app.forms import LoginForm
 @app.route('/index')
 
 def index():
-    gonderis = [{
+    gonderis = [
         {"yazar": {"username": "bilal"},
         "eser": "sait faik'in abasıyanık kitabı :d"}
-    }]
+    ]
 
     return render_template('index.html', title="------", user=user, gonderiler=gonderis)
 
