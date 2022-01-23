@@ -1,20 +1,22 @@
 from app import app
-from flask import render_template, flash, redirect, url_for
+from flask import render_template,flash,redirect,url_for
 from app.forms import LoginForm
 
 @app.route('/')
-@app.route('/index')
+@app.route('/anasayfa')
 def index():
-
     gonderis = [
-        {'yazar':{'username':'Onur'},
-        'yazi':'Baba biz ne yaşadık ya'},             
-        {'yazar':{'username':'Akyol'},
-        'yazi':'Araba nerede? Para nerde?'},
-    ]
-    user = {"kullaniciadi":"Onur"}
-    return render_template("index.html", title="TireTire", user=user, gonderiler=gonderis)
+        {'yazar':{'username':'onur'},
+        'yazi':'Baba biz ne yaşadık ya'
+        },
+        {'yazar':{'username':'akyol'},
+        'yazi':'Araba nerde? Para nerde?'
+        },
 
+    ]
+    user = {"kullanicadi":"ibrahim"}
+    return render_template("index.html",title="Web Sitesi",user=user,gonderiler = gonderis)
+    
 @app.route('/login',methods=['GET','POST'])
 def login():
     form = LoginForm()

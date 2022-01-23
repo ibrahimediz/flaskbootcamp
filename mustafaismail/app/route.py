@@ -6,15 +6,15 @@ from app.forms import LoginForm
 @app.route('/index')
 def index():
     gonderis = [
-        {'yazar':{'username':'ali'},
-        'yazi':'What a wonderful world'
+        {'yazar':{'username':'Yusuf'},
+        'yazi':'Tale Worlds'
         },
         {'yazar':{'username':'hasan'},
-        'yazi':'Yakarsa dünyayı garipler yakar'
+        'yazi':'Bir gün bir sahabe yolda yürürken karınca görmüş'
         },
 
     ]
-    user = {"kullanicadi":"ibrahim"}
+    user = {"kullanicadi":"tayyar"}
     return render_template("index.html",title="Web Sitesi",user=user,gonderiler = gonderis)
     
 @app.route('/login',methods=['GET','POST'])

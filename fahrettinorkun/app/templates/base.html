@@ -7,6 +7,10 @@
         {% endif %}
     </head>
     <body>
+        <div>
+            Web Sitesi
+            <a href="{{url_for('index')}}">Anasayfa</a>
+            <a href="{{url_for('login')}}">Giriş</a>
         {% block content %}
         {% endblock %} 
     </body>

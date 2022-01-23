@@ -6,7 +6,6 @@ from app.forms import LoginForm
 
 @app.route('/')
 @app.route('/index')
-
 def index():
     authorInfo = [
         {
@@ -15,7 +14,7 @@ def index():
         },
         {
             'author': {'username': 'Hasan'},
-            'test': 'Allahim sil beni listeden :) Amin :)'
+            'text': 'Allahim sil beni listeden :) Amin :)'
         }
     ]
     

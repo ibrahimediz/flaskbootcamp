@@ -5,5 +5,5 @@ from wtforms.validators import DataRequired
 class LoginForm(FlaskForm):
     kullaniciadi = StringField("Kullanıcı Adı", validators=[DataRequired()])
     sifre = PasswordField("Şifre", validators=[DataRequired()])
-    benihatirla = BooleanField("Beni Hatirla")
+    benihatirla = BooleanField("Beni Hatırla")
     submit = SubmitField("Giriş")

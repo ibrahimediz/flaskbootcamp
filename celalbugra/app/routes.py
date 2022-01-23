@@ -16,7 +16,7 @@ def index():
     user = {"kullaniciadi":"Bugra"}
     return render_template("index.html",title="Deneme",user=user,gonderiler=gonderis)
 
-@app.route("/login")
+@app.route("/login", methods=['GET','POST'])
 def login():
     form = LoginForm()
     if form.validate_on_submit():

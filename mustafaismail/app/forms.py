@@ -6,4 +6,4 @@ class LoginForm(FlaskForm):
     kullaniciadi = StringField("Kullanıcı Adı", validators=[DataRequired()])
     sifre = PasswordField("Şifre", validators=[DataRequired()])
     benihatirla = BooleanField("Beni Hatırla")
-    submit = SubmitField("Giriş")
+    submit = SubmitField("Bana bas")
