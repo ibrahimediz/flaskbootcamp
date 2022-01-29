@@ -2,19 +2,10 @@
 
 {% block title %} Yazı Listesi {% endblock title %} 
 
+
 {% block content %}
-<h1>Merhaba {{user.kullaniciadi}}</h1>
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-<ul>
-    {% for message in messages %}
-    <li>{{ message }}</li>
+    <h1>Hi, {{ current_user.username }}!</h1>
+    {% for post in posts %}
+    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
     {% endfor %}
-</ul>
-{% endif %}
-{% endwith %}
-{% for gonderi in gonderiler %}
-<h2>{{gonderi.yazar.username}}</h2> dedi ki 
-<div><p>{{gonderi.yazi}}</p></div>
-{% endfor %}
-{% endblock content %}
+{% endblock %}

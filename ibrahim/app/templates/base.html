@@ -8,10 +8,25 @@
     </head>
     <body>
         <div>
-            Web Sitesi
-            <a href="{{url_for('index')}}">Anasayfa</a>
-            <a href="{{url_for('login')}}">Giriş</a>
+            Microblog:
+            <a href="{{ url_for('index') }}">Home</a>
+            {% if current_user.is_anonymous %}
+            <a href="{{ url_for('login') }}">Login</a>
+            
+            {% else %}
+            <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
+        </div>
         {% block content %}
         {% endblock %} 
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
     </body>
 </html>
