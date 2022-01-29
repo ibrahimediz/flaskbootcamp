@@ -1,0 +1,28 @@
+export MAIL_SERVER=smtp.googlemail.com
+export MAIL_PORT=587
+export MAIL_USE_TLS=1
+export MAIL_USERNAME=<your-gmail-username>
+export MAIL_PASSWORD=<your-gmail-password>
+
+
+Farklı konfigürasyonlar için:
+# python3 -m smtpd -n -c DebuggingServer localhost:8025
+
+
+moment ile ilgili bilgiler
+{{ year }}-{{ month }}-{{ day }}T{{ hour }}:{{ minute }}:{{ second }}{{ timezone }}
+
+moment('2021-06-28T21:45:23Z').format('L')
+"06/28/2021"
+moment('2021-06-28T21:45:23Z').format('LL')
+"June 28, 2021"
+moment('2021-06-28T21:45:23Z').format('LLL')
+"June 28, 2021 2:45 PM"
+moment('2021-06-28T21:45:23Z').format('LLLL')
+"Monday, June 28, 2021 2:45 PM"
+moment('2021-06-28T21:45:23Z').format('dddd')
+"Monday"
+moment('2021-06-28T21:45:23Z').fromNow()
+"7 hours ago"
+moment('2021-06-28T21:45:23Z').calendar()
+"Today at 2:45 PM"
